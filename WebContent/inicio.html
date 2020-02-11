@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/estilos.css">
+<title>Meteorología</title>
+</head>
+<body>
+<div id="logo"><img id="logoimg" src="img/logo.png"></div>
+	<br>
+	<Form method = "GET" action = "seccionusuario" id="formusuario" class="formulario">
+		<Input type = "hidden" id="opcion" name="opcion">
+		<Label for = "usuario" > Usuario </label>
+		<Input id = "usuario" type = "text" name = "usuario"/><br><br>
+		<Label for = "pss" > Contraseña </label>
+		<Input id = "pss" type = "password" name = "pss" ><br><br>
+		<Input class = "boton" type = "button" value="Inicio" onClick="sesion()">
+		<Input class = "boton" type = "button" value="Alta" onClick="alta()">
+	</Form >
+	<br>
+	<Form method = "GET" action = "tiempo.jsp" id = "consultar" class="formulario">
+		<Input type = "submit" value="Consultar Tiempo">
+	</Form >
+	<script src="main.js"></script>
+</body>
+</html>

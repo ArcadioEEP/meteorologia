@@ -1,0 +1,60 @@
+@charset "ISO-8859-1";
+body{
+	background-image: url("../img/fondo.png");
+	background-size: cover;
+	font-family: "georgia";
+}
+#logo, .cajaBoton{
+	display: flex;
+	align-items: center; 
+	justify-content: center; 
+}
+#logoimg{
+	margin: auto;
+}
+form, #tabla{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+h1, h2, h3, h4{
+	text-align: center;
+}
+.formulario{
+	margin: 0 auto;
+	padding: 10px;
+	width: 40%;
+	text-align: center;
+	border-style: solid;
+}
+.boton{
+	margin: 0 6px;
+	padding: 2;
+}
+.error{
+	color: red;
+	text-align: center;
+}
+
+#repetir, #tempError{
+	visibility: hidden;
+}
+
+#correcto{
+	color: green;
+}
+#tabla{
+	margin: auto;
+	border: solid;
+	border-collapse: collapse;
+}
+td{
+	border: 1px solid black;
+	text-align: center;
+	padding: 10px;
+}
+#camara1, #camara2{
+	max-width: 50px;
+}
+#camara2{
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
