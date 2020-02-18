@@ -1,0 +1,35 @@
+CREATE TABLE usuario (
+id_usuario INT AUTO_INCREMENT,
+nombre	VARCHAR(255) DEFAULT NULL,
+password VARCHAR(255) DEFAULT NULL,
+CONSTRAINT pk_usuario PRIMARY KEY (id_usuario)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE ciudad (
+id_ciudad INT AUTO_INCREMENT,
+nombre	VARCHAR(255) DEFAULT NULL,
+CONSTRAINT pk_ciudad PRIMARY KEY (id_ciudad)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE estado (
+id_estado INT AUTO_INCREMENT,
+nombre varchar(255) DEFAULT NULL,
+CONSTRAINT pk_estado PRIMARY KEY (id_estado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE tiempo (
+ciudad	INT NOT NULL,
+fecha DATE NOT NULL,
+tempMin	INT DEFAULT NULL,
+tempMax	INT DEFAULT NULL,
+estado INT DEFAULT NULL,
+CONSTRAINT pk_tiempo PRIMARY KEY (ciudad, fecha),
+CONSTRAINT fk_tiempo FOREIGN KEY (ciudad)
+	REFERENCES ciudad (id_ciudad),
+CONSTRAINT fk_tiempo2 FOREIGN KEY (estado)
+	REFERENCES estado (id_estado)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO estado (nombre) VALUES ("soleado");
+INSERT INTO estado (nombre) VALUES ("nublado");
+INSERT INTO estado (nombre) VALUES ("lluvioso");
